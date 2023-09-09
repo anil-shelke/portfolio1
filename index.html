@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anil Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster&family=Roboto:ital@1&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            height: 70px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 80px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            font-family: 'Bree Serif', serif;
+            align-items: center;
+        }
+
+        nav div {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: 'Lobster', cursive;
+        }
+
+        nav img {
+            height: 50px;
+        }
+
+        .item {
+            padding: 6px 16px;
+            margin: 6px 22px;
+        }
+
+        .item a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+
+        .item a:hover {
+            color: blue;
+        }
+
+        /* home*/
+
+        #home {
+            font-family: 'Lobster', cursive;
+        }
+
+        #home {
+            align-items: center;
+            height: 300px;
+        }
+
+        #home::before {
+            content: '';
+            background: url(12.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            height: 80%;
+            width: 100%;
+        }
+
+        #home #hcontainer {
+            font-size: 30px;
+            margin-top: 220px;
+            text-align: center;
+        }
+
+        @keyframes slideInAbove {
+            from {
+                transform: translateY(300px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        #home #hcontainer {
+            animation-name: slideInAbove;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-in;
+        }
+
+        #home {
+            background: linear-gradient(-225deg,
+                    white 0%,
+                    cyan 29%,
+                    #ff1361 67%,
+                    #fff800 100%);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* about */
+
+        #about {
+            font-family: 'Bree Serif', serif;
+            margin-top: 50px;
+        }
+
+
+        #aboutcontainer {
+            display: flex;
+            justify-content: space-around;
+            margin: auto 150px;
+        }
+
+        #about h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        #about .left {
+            font-size: 23px;
+            text-align: center;
+            width: 430px;
+        }
+
+        #about img {
+            height: 300px;
+            width: 300px;
+            border-radius: 157pc;
+        }
+
+        #about .left p {
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+
+        }
+
+        /* skills  or certifications*/
+        .skill {
+            font-family: 'Bree Serif', serif;
+            margin: 85px auto;
+        }
+
+        .skill .skillcontainer {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .skill h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 39px 0px;
+        }
+
+        .skill .pro {
+            height: 450px;
+            width: 450px;
+            background-color: #f1f7fe;
+            margin: 25px;
+            border-radius: 7px;
+            text-align: center;
+            box-shadow: 10px 10px 8px 10px #888888;
+
+        }
+
+        .skill img {
+            height: 250px;
+            width: 280px;
+            margin: 12px;
+        }
+
+        /* projects  */
+        .projects {
+            font-family: 'Bree Serif', serif;
+            margin: 70px auto;
+        }
+
+        .projects .projectcontainer {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .projects h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 39px 0px;
+        }
+
+        .projects .pro {
+            height: 450px;
+            width: 450px;
+            background-color: #dfeeff;
+            margin: 25px;
+            border-radius: 7px;
+            text-align: center;
+            box-shadow: 10px 10px 8px 10px #888888;
+
+        }
+
+        .projects img {
+            height: 250px;
+            width: 280px;
+            margin: 12px;
+        }
+
+
+        /* Resume & contact */
+        #Resume_cont {
+            display: flex;
+            justify-content: space-around;
+            font-family: 'Bree Serif', serif;
+            text-align: center;
+            margin: 70px;
+            padding: 12px;
+            font-size: 22px;
+        }
+
+        /* footer */
+        footer {
+            font-family: 'Bree Serif', serif;
+            background-color: rgb(10, 20, 43);
+            color: white;
+            height: 300px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        footer ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            list-style: none;
+        }
+
+        .f_item {
+            padding: 6px 16px;
+            margin: 6px 22px;
+        }
+
+        .f_item a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+
+        footer div {
+            margin: 33px 420px;
+            padding: 25px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="logo (2).png" alt="">
+            <h3 class="left">Anil Portfolio</h3>
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#certificates">Certificates</a></li>
+            <li class="item"><a href="#projects">Projects</a></li>
+            <li class="item"><a href="#resume">Resume</a></li>
+            <li class="item"><a href="#contact">Contact Info</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div id="hcontainer">
+            <h3>
+                Hi! I am Anil Shelke.<br> I am a Web Developer...
+            </h3>
+        </div>
+    </section>
+    <section id="about">
+        <div id="aboutcontainer">
+            <div class="right">
+                <img src="anil.png" alt="">
+            </div>
+            <div class="left">
+                <h1>About Us</h1>
+                <p>
+                    I possess skills in web development, including HTML, CSS, and JavaScript. Additionally, I am
+                    proficient in working with WordPress. My programming knowledge encompasses languages such as C, C++,
+                    Python, and Java.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill" id="certificates">
+        <h1>Certificates</h1>
+        <div class="skillcontainer">
+            <div class="pro">
+                <h2>Certificate of HTML & CSS</h2>
+                <img src="c1.png" alt="">
+                <p>"Craft a user-friendly food ordering website using HTML for structure, CSS for appealing visuals, and
+                    JavaScript for seamless interactions</p>
+            </div>
+            <div class="pro">
+                <h2>Certificate of JavaScript & React.js</h2>
+                <img src="c3.png" alt="">
+                <p>"Build an engaging user profile with HTML for structure, CSS for styling, and JavaScript for dynamic
+                    interactions</p>
+            </div>
+        </div>
+        <div class="skillcontainer">
+            <div class="pro">
+                <h2>Certificate of JavaScript & React.js</h2>
+                <img src="c2.png" alt="">
+                <p>"Craft a user-friendly food ordering website using HTML for structure, CSS for appealing visuals, and
+                    JavaScript for seamless interactions</p>
+            </div>
+            <div class="pro">
+                <h2>Certificate of Oracle cloud Infrastructure</h2>
+                <img src="c4.png" alt="">
+                <p>"Craft a user-friendly food ordering website using HTML for structure, CSS for appealing visuals, and
+                    JavaScript for seamless interactions</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="projectcontainer">
+            <div class="pro">
+                <h2>Chat Webapp</h2>
+                <img src="pr1.png" alt="">
+                <p>Chat website is powered by HTML, CSS, and Java to facilitate real-time communication with ease.</p>
+                <a href="pr1.png" target="_blank">Image Link</a>
+            </div>
+            <div class="pro">
+                <h2>Fitness Website</h2>
+                <img src="pr2.png" alt="">
+                <p>Fitness website is built using HTML, CSS, and JavaScript to provide a seamless and interactive user experience.</p>
+                <a href="pr2.png" target="_blank">Image Link</a>
+            </div>
+            <div class="pro">
+                <h2>Food Order Website</h2>
+                <img src="pr3.png" alt="">
+                <p>Food order website is crafted using HTML, CSS, and JavaScript to provide a delightful and user-friendly food ordering experience.</p>
+                <a href="pr3.png" target="_blank">Image Link</a>
+            </div>
+        </div>
+        <div class="projectcontainer">
+            <div class="pro">
+                <h2>Transparent Login Page</h2>
+                <img src="pr4.png" alt="">
+                <p>Transparent login page website, created using HTML, CSS, and Java, offers a sleek and modern way to access your accounts.</p>
+                <a href="pr4.png" target="_blank">Image Link</a>
+            </div>
+            <div class="pro">
+                <h2>Calculator</h2>
+                <img src="pr1.png" alt="">
+                <p>Calculator website, developed using HTML, CSS, and JavaScript, provides a user-friendly tool for basic arithmetic operations.</p>
+                <a href="pr1.png" target="_blank">Image Link</a>
+            </div>
+            <div class="pro">
+                <h2>Landing Page</h2>
+                <img src="pr2.png" alt="">
+                <p>Landing page website, built using HTML, CSS, and JavaScript, welcomes visitors with an attractive and informative introduction.</p>
+                <a href="pr2.png" target="_blank">Image Link</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Resume_cont">
+        <div id="resume">
+            <h1>Resume</h1>
+            <p>Click the link below to open the PDF:</p>
+            <a href="Anil Resume.pdf" target="_blank">Resume Link</a>
+        </div>
+
+        <div id="contact">
+            <h1>Contact Info</h1>
+            <p>Email Id : anilshelke912003@gmail.com</p>
+            <p>Phone No. : 8767403213</p>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <ul>
+                <li class="f_item"><a href="/">Home</a></li>
+                <li class="f_item"><a href="#about">About</a></li>
+                <li class="f_item"><a href="#certificates">Certificates</a></li>
+                <li class="f_item"><a href="#projects">Projects</a></li>
+                <li class="f_item"><a href="#resume">Resume</a></li>
+                <li class="f_item"><a href="#contact">Contact Info</a></li>
+            </ul>
+        </div>
+        <p>
+            Copyright &copy;www.Anil.com. All rights reserved!
+        </p>
+    </footer>
+</body>
+
+</html>
